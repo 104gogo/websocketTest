@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>WebSocket Demo</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/animate.css">
+</head>
+
+<body>
+	<div id="test">
+		<input placeholder="请输入你的姓名" v-model="username" />
+		<button v-on="click:sureSend">发送</button>
+		<ul class="user-name-list">
+			<li class="animated fadeInRight" v-repeat="user: users">{{user.username}}</li>
+		</ul>
+	</div>
+	<script src="/js/jq.js"></script>
+	<script src="/js/vue.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/main.js"></script>
+</body>
+</html>
